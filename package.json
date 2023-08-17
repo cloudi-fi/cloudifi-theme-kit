@@ -1,6 +1,6 @@
 {
   "name": "cloudifi-theme-kit",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "description": "Cloudi-Fi Theme Kit is a developer tool which handles files watch & compile",
   "author": "Julien Cabanès <julien@cloudi-fi.com>",
   "license": "MIT",
