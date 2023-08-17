@@ -20,12 +20,10 @@ import {
 
 const themes = {};
 
-export function compileSass(themePath) {
-  const themesDir = path.dirname(themePath);
-  const themeName = path.basename(themePath);
-
-  addTheme(themeName, themesDir);
-
+export function compileSass(themesDir, targetThemes) {
+  targetThemes.forEach((themeName) => {
+    addTheme(themeName, themesDir);
+  });
 
   Object.entries(themes)
     .map(themeBaseFactory(themes))
@@ -33,10 +31,15 @@ export function compileSass(themePath) {
 
   let sassCompiler = ['sass', compilers.sass];
 
-  compilingListFactory(themes)(sassCompiler);
-  prepareFactory(themes)(sassCompiler);
-  compileFactory(themes)(sassCompiler);
+  let compilingThemes = {};
 
+  targetThemes.forEach((themeName) => {
+    compilingThemes[themeName] = themes[themeName];
+  });
+
+  compilingListFactory(compilingThemes)(sassCompiler);
+  prepareFactory(compilingThemes)(sassCompiler);
+  compileFactory(compilingThemes)(sassCompiler);
 }
 
 function addTheme(themeName, themesDir) {

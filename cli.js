@@ -16,7 +16,7 @@ if (args.indexOf('link') > -1 || args.indexOf('ln') > -1) {
 } else if (args.indexOf('compile') > -1) {
   compile();
 } else if (args.indexOf('compile-sass') > -1) {
-  compileSass(args[1]);
+  compileSass(args[1], args[2].split(','));
 } else {
   // link();
   watch();
