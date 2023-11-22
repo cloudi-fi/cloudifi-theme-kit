@@ -1,6 +1,6 @@
 {
   "name": "cloudifi-theme-kit",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Cloudi-Fi Theme Kit is a developer tool which handles files watch & compile",
   "author": "Julien Cabanès <julien@cloudi-fi.com>",
   "license": "MIT",
@@ -28,11 +28,11 @@
     "imagemin": "^7.0.0",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",
-    "node-sass": "^6.0.0",
-    "node-sass-utils": "^1.1.2",
+    "node-sass": "^9.0.0",
+    "node-sass-utils": "^1.1.3",
     "postcss": "^7.0.18",
     "promise": "^8.0.3",
-    "sass": "^1.63.6",
+    "sass": "^1.69.5",
     "sass-cast": "^0.5.5",
     "svgo": "^1.3.0",
     "webpack": "^4.41.0"
